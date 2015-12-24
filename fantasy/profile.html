@@ -1,0 +1,417 @@
+<html>
+<style>
+
+td{text-align: center;
+//background: #ffffff;
+//border-style: solid;
+//border-color:#000000;
+color: #ffffff;
+}
+
+h1{//text-align: center;
+//background: #ffffff;
+//border-style: solid;
+//border-color:#000000;
+padding-top: 17px;
+//padding-right: 50px;
+//padding-bottom: 25px;
+padding-left: 20px;
+color: #ffffff;
+font-size: 80px;}
+
+body{text-align: left;
+background: url("http://i.imgur.com/PqbPuc0.png");
+font-family: "Century Gothic", Century Gothic, sans-serif;
+padding-top: 305px;
+//padding-right: 50px;
+//padding-bottom: 25px;
+padding-left: 90px;
+color:#ffffff;}
+
+button{cursor: pointer;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;} 	
+
+button:hover{background-color:#bd9647;
+color: #ffffff;} 
+		
+
+
+</style>
+
+<link rel="icon" 
+      type="image/png" 
+      href="http://example.com/myicon.png">
+<head>
+<title>My Team - Fantasy Football 2015</title>
+
+
+</head>
+
+<?php
+$servername = "localhost";
+$username = "b130055cs";
+$password = "b130055cs";
+$database = "db_b130055cs";
+
+// Create connection
+$conn = mysql_connect($servername, $username, $password,$database);
+
+// Check connection
+if (mysql_error($conn)) {
+   // die("Connection failed: " . $conn->connect_error);
+}
+
+
+<body>
+
+<div id="txtBox_4" objtype="2" style="width: 951px; height: 230px; position: absolute; padding: 10px; top: 16px; left: 12px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 48pt;">
+        <span style="color: rgb(189, 150, 71);">My Team 
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 1200px; height: 230px; position: absolute; padding: 10px; top: 6px; left: 0px; z-index: 4; " class="" align="right">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 48pt;">
+        <span style="color: rgb(255, 255, 255);">Welcome, User
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 951px; height: 230px; position: absolute; padding: 10px; top: 86px; left: 12px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 36pt;">
+        <span style="color: rgb(255, 255, 255);">Custom User Team Name 
+           </span></span></span></div>
+
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 205px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Overall Points:
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 235px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Overall Rank:
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 265px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">GameWeek Points:
+           </span></span></span></div>		   
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 295px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Total Users:
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 325px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Total Team Value:
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 355px; left: 955px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Balance in bank:
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 165px; left: 641px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 20pt;">
+        <span style="color: rgb(255, 255, 255);">Starting XI
+           </span></span></span></div>			   
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 165px; left: 951px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 20pt;">
+        <span style="color: rgb(255, 255, 255);">Points/Rankings
+           </span></span></span></div>
+<div id="txtBox_4" objtype="2" style="width: 200px; height: 230px; position: absolute; padding: 10px; top: 430px; left: 951px; z-index: 4; " class="">
+  <span style="font-weight: bold;">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 20pt;">
+        <span style="color: rgb(255, 255, 255);">Substitutes
+           </span></span></span></div>
+
+
+<div style="position: absolute; padding: 10px; top: 153px; left: 15px; z-index: 100; ">
+    <span style="font-family: 'Century Gothic';">
+      <span style="font-size: 12pt;">
+        <span style="color: rgb(255, 255, 255);">Select your preferred formation
+           </span></span></span></div>
+		   
+		   
+<form style="position: absolute; top: 155px; left: 274px; z-index: 100; " >
+<select id="formation" style="height: 35px;width: 60px; border-radius: 20px 0px 0px 20px; border:0px; padding-left:7px;">
+  <option value="442">4-4-2</option>
+  <option value="451">4-5-1</option>
+  <option value="433">4-3-3</option>
+  <option value="352">3-5-2</option>
+
+</select>
+</form>
+
+
+<!--
+Team Selection Forms
+-->
+
+<form style="position: absolute; padding: 10px; top: 205px; left: 640px; z-index: 100; " >
+Goalkeeper<br>
+<select id="GK1" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:1px; border:0px;"> 
+  <option value="GK1">GK1</option>
+  <option value="GK2">GK2</option>
+</select>
+<br>
+
+Defenders<br>
+<select id="DF1" style="width: 263px; height: 25px;  background-color:#deb258; border-color:#000000;  border:0px;">
+  <option value="DF1">DF1</option>
+  <option value="DF2">DF2</option>
+  <option value="DF3">DF3</option>
+  <option value="DF4">DF4</option>
+  <option value="DF5">DF5</option>
+</select> 
+ <br>
+
+<select id="DF2" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:1px; border:0px;">
+  <option value="DF1">DF1</option>
+  <option value="DF2">DF2</option>
+  <option value="DF3">DF3</option>
+  <option value="DF4">DF4</option>
+  <option value="DF5">DF5</option>
+</select>
+<br>
+
+<select id="DF3" style="width: 263px; height: 25px;  background-color:#deb258; border-color:#000000; position:relative; top:2px; border:0px;">
+  <option value="DF1">DF1</option>
+  <option value="DF2">DF2</option>
+  <option value="DF3">DF3</option>
+  <option value="DF4">DF4</option>
+  <option value="DF5">DF5</option>
+</select> 
+<br>
+
+<select id="DF4" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:3px; border:0px;">
+  <option value="DF1">DF1</option>
+  <option value="DF2">DF2</option>
+  <option value="DF3">DF3</option>
+  <option value="DF4">DF4</option>
+  <option value="DF5">DF5</option>
+</select> 
+
+<br>
+
+<select id="DF5" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:4px; border:0px;" disabled>
+  <option value="DF1">DF1</option>
+  <option value="DF2">DF2</option>
+  <option value="DF3">DF3</option>
+  <option value="DF4">DF4</option>
+  <option value="DF5">DF5</option>
+</select> 
+
+<br>
+<div style="position:relative; top:4px;">
+Midfielders<br>
+
+</div>
+
+
+<select id="MF1" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:3px; border:0px;">
+  <option value="MF1">MF1</option>
+  <option value="MF2">MF2</option>
+  <option value="MF3">MF3</option>
+  <option value="MF4">MF4</option>
+  <option value="MF5">MF4</option>
+</select> 
+<br>
+
+<select id="MF2" style="width: 263px; height: 25px;  background-color:#deb258; border-color:#000000; position:relative; top:4px; border:0px;">
+  <option value="MF1">MF1</option>
+  <option value="MF2">MF2</option>
+  <option value="MF3">MF3</option>
+  <option value="MF4">MF4</option>
+  <option value="MF5">MF4</option>
+</select> 
+<br>
+
+<select id="MF3" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:5px; border:0px;">
+  <option value="MF1">MF1</option>
+  <option value="MF2">MF2</option>
+  <option value="MF3">MF3</option>
+  <option value="MF4">MF4</option>
+  <option value="MF5">MF4</option>
+</select> 
+<br>
+
+<select id="MF4" style="width: 263px; height: 25px;    background-color:#deb258; border-color:#000000; position:relative; top:6px; border:0px;">
+  <option value="MF1">MF1</option>
+  <option value="MF2">MF2</option>
+  <option value="MF3">MF3</option>
+  <option value="MF4">MF4</option>
+  <option value="MF5">MF4</option>
+</select> 
+
+<br>
+
+<select id="MF5" style="width: 263px; height: 25px;  background-color:#deb258; border-color:#000000; position:relative; top:7px; border:0px;" disabled>
+  <option value="MF1">MF1</option>
+  <option value="MF2">MF2</option>
+  <option value="MF3">MF3</option>
+  <option value="MF4">MF4</option>
+  <option value="MF5">MF4</option>
+</select> 
+<br>
+<div style="position:relative; top:5px;">
+Forwards<br>
+
+</div>
+
+
+<select id="FW1" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:4px;border:0px;">
+  <option value="FW1">FW1</option>
+  <option value="FW2">FW2</option>
+  <option value="FW3">FW3</option>
+
+</select> 
+
+<br>
+
+<select id="FW2" style="width: 263px; height: 25px;   background-color:#deb258; border-color:#000000; position:relative; top:5px; border:0px;">
+  <option value="FW1">FW1</option>
+  <option value="FW2">FW2</option>
+  <option value="FW3">FW3</option>
+
+</select> 
+
+<br>
+
+<select id="FW3" style="width: 263px; height: 25px;  background-color:#deb258; border-color:#000000; border:0px; position:relative; top:6px; border:0px;" disabled>
+  <option value="FW1">FW1</option>
+  <option value="FW2">FW2</option>
+  <option value="FW3">FW3</option>
+
+</select> 
+
+</form>
+
+
+
+
+<!--
+END_Team Selection Forms
+-->
+
+
+<!--
+Substitution Selection Forms
+-->
+
+<form style="position: absolute; padding: 10px; top: 480px; left: 950px; z-index: 100;" >
+
+<select id="GK2" style="width: 276px; height: 25px;  border:0px; background-color:#deb258; color:#000000;" disabled>
+  <option value="GK2">GK2</option>
+  </select> 
+ <br>
+ <br>
+<select id="SUB1" style="width: 276px; height: 25px;   border:0px; background-color:#deb258; color:#000000;" disabled>
+  <option value="SUB1">SUB1</option>
+</select>
+<br>
+ <br>
+<select id="SUB2" style="width: 276px; height: 25px;   border:0px; background-color:#deb258; color:#000000;" disabled>
+  <option value="SUB2">SUB2</option>
+</select> 
+<br>
+ <br>
+<select id="SUB3" style="width: 276px; height: 25px;    border:0px; background-color:#deb258; color:#000000;" disabled>
+  <option value="SUB3">SUB3</option>
+</select> 
+
+</form>
+
+<div id="boxTool_2" objtype="5" style="width: 18px; height: 180px; position: absolute;
+top: 480px; left: 1221px; z-index: 101; background-color: #bd9647;"></div>
+
+<!--
+END_Substitution Selection Forms
+-->
+
+
+
+
+
+<button type="button" style="position: absolute; padding: 10px; padding-left:15px; top: 155px; left: 327px; z-index: 99; border-radius: 0px 20px 20px 0px; border: 0px;"
+onclick="myFunction()">select</button>
+		   
+<img id="formimage" src="http://i.imgur.com/aN42IoQ.png" 
+style="width: 930px; height: 500px; position: absolute; top: 220px; left: -135px;"/>
+
+<script>
+function myFunction() {
+    selected=document.getElementById("formation").value;
+    if(selected==442)
+	  {document.getElementById("formimage").src="http://i.imgur.com/aN42IoQ.png";
+	   document.getElementById("DF4").disabled=false;
+	   document.getElementById("DF5").disabled=true;
+	   document.getElementById("MF4").disabled=false;
+	   document.getElementById("MF5").disabled=true;
+	   document.getElementById("FW2").disabled=false;
+	   document.getElementById("FW3").disabled=true;
+	   }
+	if(selected==451)
+	  {document.getElementById("formimage").src="http://i.imgur.com/Puje3pQ.png";
+	   document.getElementById("DF4").disabled=false;
+	   document.getElementById("DF5").disabled=true;
+	   document.getElementById("MF4").disabled=false;
+	   document.getElementById("MF5").disabled=false;
+	   document.getElementById("FW2").disabled=true;
+	   document.getElementById("FW3").disabled=true;
+	  }
+	if(selected==433)
+	  {document.getElementById("formimage").src="http://i.imgur.com/bJXVB6v.png";
+	   document.getElementById("DF4").disabled=false;
+	   document.getElementById("DF5").disabled=true;
+	   document.getElementById("MF4").disabled=true;
+	   document.getElementById("MF5").disabled=true;
+	   document.getElementById("FW2").disabled=false;
+	   document.getElementById("FW3").disabled=false;
+	   }
+	if(selected==352)
+	  {document.getElementById("formimage").src="http://i.imgur.com/Ceh64ye.png";
+	   document.getElementById("DF4").disabled=true;
+	   document.getElementById("DF5").disabled=true;
+	   document.getElementById("MF4").disabled=false;
+	   document.getElementById("MF5").disabled=false;
+	   document.getElementById("FW2").disabled=false;
+	   document.getElementById("FW3").disabled=true;
+	   }
+	  
+	  }
+</script>
+
+<div id="boxTool_2" objtype="5" style="width: 300px; height: 521px; border: 1px solid rgb(51, 51, 51);
+position: absolute; top: 155px; left: 630px; z-index: -1; background-color: rgb(189, 150, 71); box-shadow: rgb(0, 0, 0) 2px 2px 15px 0px; border-radius: 20px;"
+class=""></div>
+<div id="boxTool_2" objtype="5" style="width: 300px; height: 255px; border: 1px solid rgb(51, 51, 51);
+position: absolute; top: 155px; left: 940px; z-index: -1; background-color: rgb(189, 150, 71); box-shadow: rgb(0, 0, 0) 2px 2px 15px 0px; border-radius: 20px;"
+class=""></div>
+<div id="boxTool_2" objtype="5" style="width: 300px; height: 251px; border: 1px solid rgb(51, 51, 51);
+position: absolute; top: 425px; left: 940px; z-index: -1; background-color: rgb(189, 150, 71); box-shadow: rgb(0, 0, 0) 2px 2px 15px 0px; border-radius: 20px;"
+class=""></div>
+
+
+</body>
+
+?>
+
+</html>
